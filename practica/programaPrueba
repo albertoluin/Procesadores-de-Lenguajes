@@ -1,0 +1,31 @@
+principal {
+  inivar
+    entero entero1, entero2, entero3;
+    caracter array[2], car;
+    booleano b[4][5];
+  finvar
+
+  entero funcion1(caracter parametro[2], entero entero1){
+    inivar
+      entero enteroLocal;
+    finvar
+    enteroLocal = 3;
+    devolver enteroLocal;
+  }
+
+  si(entero1+entero2>5+3) 
+  entonces {
+    b[0][0] = verdadero;
+  }
+
+  entero2=(1+2)*8*(1-2);
+
+  entero1 = funcion1(array);
+  entero2 = 0;
+  imprimir entero1;
+  b[0][0]=falso;
+  hacer
+    entero2 = entero2 + 1;
+  hasta (entero2 == entero1);
+
+}

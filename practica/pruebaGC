@@ -1,0 +1,68 @@
+principal{
+  inivar
+    entero n,valor;
+  finvar
+
+   entero fibo(entero n){
+    inivar
+      entero i,f,f1,f2;
+      entero Dato[10], Dato2[10];
+      entero result [10];
+      entero Dato3[10][2], Dato4[2][10];
+    finvar
+
+    entero fiboimprime(){
+      imprimir Dato;
+      imprimir "\n";
+      Dato2=(n+1)*Dato;
+      imprimir Dato2;
+      imprimir "\n";
+      devolver 0;
+      i = i+1;
+    }
+
+    f=0;
+    f1=1;
+    f2=1;
+    i = 0;
+    
+    hacer {
+      f1=f2;
+      f2=f;
+      f=f1+f2;
+      Dato[i]=f;
+      i = i+1;
+    }hasta (i<10);
+
+
+
+    valor=fiboimprime();
+
+    i = 0;
+    hacer {
+      Dato3[i][0]=Dato[i];
+      Dato3[i][1]=Dato2[i];
+      i = i+1;
+    }hasta (i<10);
+
+    i = 0;
+    hacer {
+      Dato4[0][i]=Dato3[i][0];
+      Dato4[1][i]=Dato3[i][1];
+      i = i+1;
+    }hasta (i<10);
+
+    imprimir Dato3*Dato4;
+    imprimir "\n";
+    imprimir Dato4*Dato3;
+    imprimir "\n";
+    devolver 0;
+
+  }
+
+  imprimir "introduce el número n-->>: ";
+  escanear n;
+  valor=fibo(n);
+  
+  imprimir "\nHemos terminado \n";
+}

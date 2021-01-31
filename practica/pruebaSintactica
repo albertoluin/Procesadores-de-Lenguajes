@@ -1,0 +1,89 @@
+principal
+{
+    inivar
+        entero ve;
+        entero ve1, ve2;
+        flotante vf ;
+        caracter vc ;
+        booleano vl ;
+        entero pe[5], pe2[5], pe3[5] ;
+        entero p23[2][3], p32[3][2], p33[3][3];
+        flotante pf[5], pf2[5] ;
+        caracter pc[5], pc2[5] ;
+        booleano pl[5][2] ;
+    finvar
+
+    entero funcionA (entero a1, flotante a2, caracter a3)
+    {
+        inivar
+            entero x1, x2 ;
+        finvar
+        caracter funcionB (caracter b1, booleano b2)
+        {
+            inivar
+                flotante xf, x2 ;
+            finvar
+            flotante funcionC (booleano c1, entero c2)
+            {
+                inivar
+                    flotante x1 ;
+                finvar
+                x1= 1.3 ;
+                ve1=2*ve2;
+
+                si (c2>10) entonces
+                    c2= c2-1*1 ;
+                si_no
+                    x1= 3.1 ;
+                devolver x1 ;
+            }
+            xf=1.5;
+
+            x2 = xf*( funcionC (falso, 1) - funcionC (verdadero, 23) ) /10.0;
+        }
+        flotante funcionD (flotante d1)
+        {
+            inivar
+                caracter dato ;
+                entero valor ;
+            finvar
+            caracter funcionE (caracter e1, caracter e2)
+            {
+                imprimir "introduzca dos caracteres: ";
+                escanear e1, e2 ;
+                si (e1=='a') entonces
+                devolver e1 ;
+                si_no {
+                    si (e1=='b') entonces
+                        {
+                            devolver e2 ;
+                        }
+                    si_no
+                        {
+                        devolver ' ';
+                        }
+                }
+            }
+            imprimir "introduzca un valor entero: ";
+            escanear valor ;
+            si (d1>0.0) entonces
+                devolver d1;
+            si_no{
+                valor= valor * 100 ;
+                d1=0.1;
+            }
+
+            pf[0] = 1.5+2.5+3.5;
+
+            devolver d1 ;
+        }
+        ve=7;
+        imprimir "Hemos llegado. ";
+    }
+    ve=funcionA(1, 1.5, 'f');
+    pf[0] = 1.5*2.5+3.5;
+    pe[0] = 6+2+5;
+
+    imprimir "Hemos llegado. 1", pe;
+
+}

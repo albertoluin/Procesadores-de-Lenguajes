@@ -1,0 +1,20 @@
+principal {
+  inivar
+    entero n[2], m[2][2], p[2][2], q[2][3];
+  finvar
+
+  entero funcion(){
+    imprimir 5*n;
+    imprimir "\n"; 
+    imprimir n; 
+    imprimir "\n";
+    devolver 0;
+  }
+
+  n[0]=1;
+  n[1]=2;
+
+  m[0][0]=funcion();
+    
+
+}

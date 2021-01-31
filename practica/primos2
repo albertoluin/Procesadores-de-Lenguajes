@@ -1,0 +1,32 @@
+principal{
+	inivar
+
+				entero n, curr, ultim, cuenta, primero;
+        entero i,f,f1,f2;
+        entero fib[100];
+        entero result [100];
+
+	finvar
+
+
+	curr=2;
+	ultim=0;
+	cuenta=0+2;
+	primero=1;
+
+	imprimir "introduce numero: ";
+	escanear n;
+	imprimir n;
+	imprimir "==";
+	curr=2;
+
+	mientras(curr < n){
+		inivar
+			entero d ;
+		finvar
+
+        curr=curr+1;
+	}
+    imprimir curr;
+	imprimir "\n";
+}

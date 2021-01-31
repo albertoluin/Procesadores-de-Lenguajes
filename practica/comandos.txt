@@ -1,0 +1,14 @@
+make todo
+./yacc programaMatrices
+make -f makefileG
+./ejecutable
+
+
+
+1.- se compila el léxico (se usa la tabla de tokens generada por 2) "se harán a la vez 1 y 2 entiendo"
+2.- se compila el yacc (genera la tabla de tokens yacc.tab.h)
+3.- se compila el semantico (archivo en c)(tb contiene generar código intermedio)
+4.- se compila el main (donde se hace una sentencia para poder pasar el archivo al programa)
+5.- se compila todo junto para sacar el ejecutable yacc
+
+BISON Apéndice C

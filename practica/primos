@@ -1,0 +1,57 @@
+principal{
+	inivar
+
+		entero n, curr, ultim, cuenta, primero;
+
+	finvar
+
+	curr=2;
+	ultim=0;
+	cuenta=0;
+	primero=1;
+
+	imprimir "introduce numero: ";
+	escanear n;
+	imprimir n;
+	imprimir "==";
+	curr=2;
+
+	mientras(curr <= n){
+		inivar
+			entero d ;
+		finvar
+
+		d=n/curr;
+
+		si (d*curr == n) entonces {
+			si (curr != ultim) entonces{
+				ultim=curr;
+				cuenta=1;
+			}si_no{
+				cuenta=cuenta+1;
+			}
+			n=n/curr;
+		}si_no{
+			si(cuenta>0) entonces{
+				si(primero == 0) entonces{ imprimir " *";}
+				primero=0;
+				imprimir " ", curr;
+				si(cuenta>1) entonces{
+					imprimir "^" ;
+					imprimir cuenta;
+				}
+			}
+			curr=curr+1;
+			cuenta=0;
+		}
+	}
+	si(cuenta>0) entonces {
+		si(primero == 0)entonces { imprimir " *";}
+		primero=0;
+		imprimir " ";
+		imprimir curr;
+		si(cuenta>1)entonces{imprimir "^" ;
+					imprimir cuenta;}
+	}
+	imprimir "\n";
+}

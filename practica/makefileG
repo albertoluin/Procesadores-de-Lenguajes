@@ -1,0 +1,14 @@
+.SUFFIXES:
+prueba:  generated.o 
+				gcc -o ejecutable generated.o
+
+generated.o: generated.c
+				gcc -c generated.c
+
+
+limpia:
+			rm -f ejecutable dec_dat.o generated.o dec_fun.o
+
+todo:
+		make limpia
+		make prueba
